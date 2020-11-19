@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+  }
+
+.container {
+    position: relative;
+    padding: 10px;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+}
+/* Font weight*/
+label {
+    font-weight: 600;
+}
+header {
+    background-color: #ede8c5;
+    padding: 20px;
+    text-align: center;
+}
+
+.sanity {
+    margin-top: 50px;
+}
+
+.sanity  .sanity-group {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sanity .sanity-group img {
+    margin-right: 20px ;
+}

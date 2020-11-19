@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./index.js"></script>
+    <title>CAT GET Test Report</title>
+  </head>
+  <body>
+    <div id="test-report">
+      <header>
+        <img
+          src="https://s7d2.scene7.com/is/image/Caterpillar/CM20200219-db34e-f70d2?$Type2$"
+          alt=""
+        />
+      </header>
+      <div class="container">
+        <!--Overall Container-->
+        <!--Static Test data-->
+        <p class="topright">
+            <script> document.write(new Date().toLocaleDateString()); </script>
+        </p>
+        <div class="test-data">
+          <label for="">TestData</label><br />
+          <label for="">Basic BEA Search :</label>
+          <p>1212104</p>
+          <label for="">Dimensional Search:</label>
+          <p>
+            Wheel Loader: Straight C=400 and E=40 (Choose any valid case)
+            (Choose any BE)
+          </p>
+          <label for="">Bucket Search</label>
+          <p><strong>Single Result:</strong> 9U4186</p>
+          <p><strong>Multiple Results:</strong> 3170741</p>
+        </div>
+        <!--Test Data ends-->
+        <div class="form-group">
+          <label for="env">Environment</label>
+          <select class="form-control" name="environment" id="env">
+            <option value="dev">Dev</option>
+            <option value="qa">QA</option>
+            <option value="prod">Prod</option>
+          </select>
+        </div>
+        <!--Data Refresh-->
+        <div class="form-group">
+          <label for="branch">Data Refresh Done?</label>
+          <select class="form-control" name="branch" id="branch">
+            <option value="master">Yes</option>
+            <option value="feature">No</option>
+          </select>
+        </div>
+        <!--Infra Deployment-->
+        <div class="form-group">
+          <label for="branch">Is Infra deployed?</label>
+          <select class="form-control" name="branch" id="branch">
+            <option value="master">Yes</option>
+            <option value="feature">No</option>
+          </select>
+        </div>
+        <!--UI Branch Refresh-->
+        <div class="form-group">
+          <label for="branch">UI Branch</label>
+          <select class="form-control" name="branch" id="branch">
+            <option value="master">Master</option>
+            <option value="feature">Feature</option>
+          </select>
+        </div>
+        <!--BE Branch Refresh-->
+        <div class="form-group">
+          <label for="branch">BE Branch</label>
+          <select class="form-control" name="branch" id="branch">
+            <option value="master">Master</option>
+            <option value="feature">Feature</option>
+          </select>
+        </div>
+        <!--UI Version-->
+        <div class="form-group">
+          <label for="uiVersion">UI Version</label>
+          <input class="form-control" type="text" name="" id="uiVersion" />
+        </div>
+        <!--BE Version-->
+        <div class="form-group">
+          <label for="beVersion">BE Version</label>
+          <input class="form-control" type="text" name="" id="beVersion" />
+        </div>
+        <!--Feature Toggle - Enabled ones-->
+        <div class="form-group">
+          <label for="featureEnabled">Feature Enabled</label>
+          <textarea
+            class="form-control"
+            name=""
+            id="featureEnabled"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <!--Feature Toggle - Removed ones-->
+        <div class="form-group">
+          <label for="featureRemoved">Feature Removed</label>
+          <textarea
+            class="form-control"
+            name=""
+            id="featureRemoved"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <!--BOM list Created during sanity-->
+        <div class="bom-list">
+          <label for="bom1">BOM ID 1</label>
+          <input class="form-control" id="bom1" type="text" />
+          <label for="bom2">BOM ID 2</label>
+          <input class="form-control" id="bom2" type="text" />
+          <label for="bom3">BOM ID 3</label>
+          <input class="form-control" id="bom3" type="text" />
+        </div>
+        <div class="sanity">
+          <label for="">Sanity</label>
+          <div class="sanity-group">
+            <img width="100" src="./assets/safari.png" alt="" />
+            <input class="form-control" name="safari" id="safari" value="Select at least one part from each category - Save a BOM "/>
+          </div>
+          <div class="sanity-group">
+            <img width="100" src="./assets/chrome.png" alt="" />
+            <input class="form-control" name="chrome" id="chrome" value="Edit works fine in Draft" />
+          </div>
+          <div class="sanity-group">
+            <img width="100" src="./assets/ipad.webp" alt="" />
+            <input class="form-control" name="iPad" id="iPad" value="Edit works fine in Saved BOM"/>
+          </div>
+          <div class="sanity-group">
+            <img width="100" src="./assets/mozila.png" alt="" />
+            <input class="form-control" name="firefox" id="firefox" value="Downloading works fine"/>
+          </div>
+          <div class="sanity-group">
+            <img width="100" src="./assets/iphone.jpeg" alt="" />
+            <input class="form-control" name="iPhone" id="iPhone" value="Feedback works fine"/>
+          </div>
+        </div>
+
+        <!--Regression Test executed-->
+        <div class="regression-tets">
+          <label for="regression">Regression</label>
+          <textarea
+            class="form-control"
+            name=""
+            id="regression"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <button class="btn-primary mt-2 p-2" id="downloadBtn">
+          Download Report
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
