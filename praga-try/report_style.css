@@ -1,0 +1,37 @@
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.header{
+    text-align: center;
+    padding-top: 10px;
+    background-color: azure;
+}
+
+hr{
+    color: #2d2b2b36;
+    border: 1px solid;
+}
+
+.test-data, .branch-versioning, .data-refresh, .features, .bom-wrapper, .download-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.test-data-left{
+    overflow: auto;
+}
+
+.test-data-wrapper h2{
+text-align: center;
+text-decoration: underline;
+}
+
+.features h5{
+    text-decoration: underline;
+}
+
+.download-btn{
+margin: 20px;
+}

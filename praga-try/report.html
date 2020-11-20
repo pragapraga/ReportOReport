@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT GET Report</title>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"
+  ></script>
+    <!--BootStrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./report_style.css">
+    <script defer src="../index.js"></script>
+</head>
+
+<body>
+     <!--Base Container-->
+    <div class="container" id="test-report">
+        <div class="header">
+             <img src="https://s7d2.scene7.com/is/image/Caterpillar/CM20200219-db34e-f70d2?$Type2$" alt="" />
+        </div>
+        <hr class="my-3" />
+        <!--Line Break-->
+        <div class="test-data-wrapper">
+            <!--Test Data Start-->
+            <h2>Test Data</h2>
+            <div class="test-data">
+                <div class="test-data-left">
+                    <h4>1. Basic BEA Search - 1212104</h4>
+                    <h4>2. Dimensional Search - Wheel Loader: Straight C=400 and E=40</h4>
+                    <p> (Choose any valid case) (Choose any BE)
+                    </p>
+                </div>
+                <div class="test-data-right">
+                    <h4>3. Bucket Search</h4>
+                    <h4>3.1 Single Result: 9U4186</h4>
+                    <h4>3.2 Multiple Results: 3170741</h4>
+                </div>
+            </div>
+            <!--Test Data End-->
+        </div>
+        <hr class="my-3" />
+        <!--Line Break-->
+        <div class="branch-versioning">
+            <!--Branch Versioning Start-->
+            <div class="ui">
+                <div class="form-group">
+                    <h5>UI Branch</h5>
+                    <select class="form-control" name="branch" id="branch">
+                        <option value="master">Master</option>
+                        <option value="feature">Feature</option>
+                    </select>
+                </div>
+                <label for="uiversion">UI Version</label>
+                <input type="text" id="uiversion" placeholder="YYYYMMDD.N">
+            </div>
+            <div class="be">
+                <div class="form-group">
+                    <h5>BE Branch</h5>
+                    <select class="form-control" name="branch" id="branch">
+                        <option value="master">Master</option>
+                        <option value="feature">Feature</option>
+                    </select>
+                </div>
+                <label for="uiversion">BE Version</label>
+                <input type="text" id="beversion" placeholder="YYYYMMDD.N">
+            </div>
+            <div class="infra">
+                <div class="form-group">
+                    <h5>Infra Deployed?</h5>
+                    <select class="form-control" name="branch" id="branch">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--Branch Versioning End-->
+        <hr class="my-3" />
+        <!--Line Break-->
+        <div class="data-refresh">
+            <!--Data Refresh Start-->
+            <h5>Did we need data refresh?</h5>
+            <div class="form-group">
+                <select class="form-control" name="branch" id="branch">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        <!--Data Refresh End-->
+        <hr class="my-3" />
+        <!--Line Break-->
+        <div class="features">
+            <!--Features Start-->
+            <div class="features-enabled">
+                <h5>Features Enabled</h5>
+                <textarea class="form-control" cols="25" rows="5"></textarea>
+            </div>
+            <div class="features-removed">
+                <h5>Features Removed</h5>
+                <textarea class="form-control" cols="25" rows="5"></textarea>
+            </div>
+            <div class="features-disabled">
+                <h5>Features Disabled</h5>
+                <textarea class="form-control" cols="25" rows="5"></textarea>
+            </div>
+        </div>
+        <!--Features End-->
+        <hr class="my-3" />
+        <!--Line Break-->
+        <div class="bom-wrapper">
+            <!--BOM Start-->
+            <div class="bom1">
+                <label for="uiversion">BOM 1</label>
+                <input type="text" maxlength="5" id="bom1"><br>
+                <label for="uiversion">CWS-ID</label>
+                <input type="text" maxlength="7" id="bom1">
+            </div>
+            <div class="bom2">
+                <label for="uiversion">BOM 2</label>
+                <input type="text" maxlength="5" id="bom2"><br>
+                <label for="uiversion">CWS ID</label>
+                <input type="text" maxlength="7" id="bom2">
+            </div>
+            <div class="bom3">
+                <label for="uiversion">BOM 3</label>
+                <input type="text" maxlength="5" id="bom3"><br>
+                <label for="uiversion">CWS ID</label>
+                <input type="text" maxlength="7" id="bom3">
+            </div>
+        </div>
+        <!--BOM End-->
+        <hr class="my-3" />
+        <!--Line Break-->
+
+    </div>
+    <!--End of Base Container-->
+    <div class="download-btn">
+        <button class="btn-primary mt-2 p-2" id="downloadBtn">
+            Download Report
+        </button>
+    </div>
+</body>
+
+</html>
