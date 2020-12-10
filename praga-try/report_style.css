@@ -21,6 +21,7 @@ hr{
 
 .test-data-left{
     overflow: auto;
+    width: 50%;
 }
 
 .test-data-wrapper h2{
